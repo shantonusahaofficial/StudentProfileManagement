@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Student Profile Management System</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.js"></script>
+	
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.css">
+
+	<link rel="stylesheet"
+	href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+	
+	<script
+	src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+	
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	
+	 <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	 
+	 <script src="js/student-list.js"></script>
+	 
+	 <style>
+	 .dt-btn{
+	   width:60px;
+	 }
+	 
+	 .dt-btn-name{
+	   width:100px;
+	 }
+	 </style>
+
+<script>
+	
+</script>
+</head>
+<body>
+	<div class=" text-center">
+  <h2 style="font-weight:bold;">Student Profile Management System</h2>
+  <p><span class="label label-default">Student Profile Details Information</span></p> 
+  <br><br>
+</div>
+
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+   <div class="panel panel-default">
+    <div class="panel-heading" style="font-size:17px;font-weight:bold;"><span class="glyphicon glyphicon-user"></span> Student Information</div>
+    <div class="panel-body">
+    <form action="">
+  <div class="form-group">
+    <label for="email">Name<span style="color:red;">*</span></label>
+    <input type="email" class="form-control" id="name">
+    <input type="hidden" class="form-control" id="updateId">
+    <span style="color:red;" id="error_name"></span>
+  </div>
+  <div class="form-group">
+    <label for="pwd">Date Of Birth<span style="color:red;">*</span></label>
+    <input type="text" class="form-control" id="dob" >
+    <span style="color:red;" id="error_dob"></span>
+  </div>
+   <div class="form-group">
+    <label for="pwd">Gender<span style="color:red;">*</span></label>
+   <select class="form-control" id="gender">
+    <option value="-1">--Select--</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+
+  <span style="color:red;" id="error_gender"></span>
+  </div>
+   <div class="form-group">
+    <label for="pwd">Note</label>
+   <textarea class="form-control" id="note" rows="3"></textarea>
+   <span style="color:red;" id="error_note"></span>
+  </div>
+  
+   <div class="form-group">
+   <button type="button" class="btn btn-primary form-control" id="btnSave"><span class="glyphicon glyphicon-plus"></span> Save</button>
+   </div>
+   
+  
+
+</form>
+    </div>
+  </div>
+    </div>
+    <div class="col-sm-8">
+      
+       <div class="panel panel-default">
+    <div class="panel-heading" style="font-size:17px;font-weight:bold;"><span class="glyphicon glyphicon-th"></span> Student Information List</div>
+    <div class="panel-body"> 
+
+    <table class="table table-bordered table-responsive" id="stdTable">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>DateOfBirth</th>
+					<th>Gender</th>
+					<th>Note</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+    </div>
+       </div>
+    </div>
+  </div>
+</div>	
+</body>
+</html>
